@@ -2,35 +2,166 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shell | Home</title>
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/select2.min.css">
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <img src="assets/images/lines/header.png" alt="">
+    </header>
     <div class="contenedor__section">
+        <div class="logo__campana">
+            <img src="assets/images/icons/logo_shell.png" alt="">
+        </div>
         <h2>Bienvenido</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p>Inicia sesión para continuar.</p>
         <form action="" id="login">
             <div class="input">
-                <label for="">Ususario</label>
-                <input type="text" name="usuario" class="usuario" id="usuario">
+                <input type="text" name="usuario" class="usuario" id="usuario" placeholder="usuario@correo.com" />
             </div>
             <div class="input">
-                <label for="">contraseña</label>
-                <input type="password" name="password" class="password" id="password">
+                <input type="password" name="password" class="password" id="password" placeholder="**********" />
+                <i id="togglePassword" class="fa-solid fa-eye" style="
+              position: absolute;
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              cursor: pointer;
+            "></i>
             </div>
             <div class="input">
-                <input type="submit" value="Login">
+                <button>Login</button>
             </div>
             <div class="input">
-                <a href="">Recuperar contraseña</a>
+                <a class="cuenta"> Crea una cuenta</a>
+            </div>
+            <p>¿Olvidaste tu contraseña? <br>Recuperala <a cl>Aquí</a></p>
+
+            <a href="" class="proveedor">¿Eres supervisor? <strong>Entra aquí</strong></a>
+            <div class="imagen_footer">
+                <img src="assets/images/icons/shell-Rimula.png" alt="">
             </div>
         </form>
 
+
+
+        <form action="" id="recovery">
+            <h2>Bienvenido</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <div class="input">
+                <input type="text" name="usuario" class="usuario" id="usuario" placeholder="usuario@correo.com" />
+            </div>
+            <div class="input">
+                <button class="cta_button">Recuperar contraseña</button>
+
+            </div>
+            <p>¿Ya tienes cuenta? <a href="">Inicia sesión</a></p>
+        </form>
     </div>
-    <footer></footer>
+    <div class="usuario__nuevo">
+        <p class="cuenta_nueva_title">Crear una nueva cuenta</p>
+        <form action="" id="nuevo_usuario">
+            <div class="close">
+                <img src="assets/images/icons/close.png" alt="" class="close_back">
+            </div>
+            <div class="input">
+                <label for="">Nombre (s)</label>
+                <input type="text" name="usuario" class="usuario" id="usuario" />
+            </div>
+            <div class="input">
+                <label for="">Apellido</label>
+                <input type="text" name="apellido" class="apellido" id="apellido" />
+            </div>
+            <div class="input">
+                <label for="">Email</label>
+                <input type="email" name="mail" class="mail" id="mail" />
+            </div>
+            <div class="input">
+                <label for="">Contraseña</label>
+                <input type="password" name="newpassword" class="newpassword" id="newpassword" />
+            </div>
+            <div class="input">
+                <label for="">Contraseña</label>
+                <input type="password" name="pass_verify" class="pass_verify" id="pass_verify" />
+            </div>
+            <div class="input">
+                <label for="">Refaccionaria</label>
+                <select name="refaccionaria" id="refaccionaria" class="refaccionaria">
+                    <option value="">Seleccione un estado</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="">Fecha de nacimiento</label>
+                <div class="date">
+                    <select id="dia"></select>
+                    <select id="mes"></select>
+                    <select id="anio"></select>
+                </div>
+                <input type="hidden" id="fechaFinal" name="fecha">
+            </div>
+            <div class="terminos">
+                <input type="checkbox" id="lorem"  name="lorem"/>
+                <label for="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, suscipit ea fuga accusamus veritatis, perspiciatis, voluptate eos officiis sequi excepturi ex est cumque. </label>
+            </div>
+             <div class="terminos">
+                <input type="checkbox" id="terminos"  name="terminos"/>
+                <label for="terminos">Acepto los <a href="">Términos y Condiciones</a></label>
+            </div>
+            <div class="input">
+                <button type="submit"class="cta_button" >Crear cuenta</button>
+            </div>
+            <p>¿Ya tienes cuenta? <a class="back_login">Inicia sesión</a></p>
+
+            <div class="imagen_gana">
+                <img src="assets/images/icons/logo_shell.png" alt="">
+            </div>
+        </form>
+
+        <p class="perfil_creado_title">Perfil creado exitosamente</p>
+        <div class="informacion_usuario">
+            <div class="check">
+                <img src="assets/images/icons/check.png" alt="check icon">
+            </div>
+            <div class="imagen_user">
+                <img src="assets/images/icons/397057724_11539820.png" alt="">
+            </div>
+            <div class="informacion">
+                <p class="name">Francisco Francisco</p>
+                <p class="apellido">Rodriguez Francisco</p>
+                <p class="id">ID: 456783</p>
+                <p class="thanks">¡Gracias por tu registro!</p>
+                <img src="" alt="Aquí va la imagen de gana+">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <img src="assets/images/lines/footer.png" alt="">
+    </footer>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/sweetalert.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/home.js"></script>
+
+    <!-- <script>
+        Swal.fire({
+            title: 'Error!',
+            text: 'Do you want to continue',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+        })
+    </script> -->
 </body>
 
 </html>
