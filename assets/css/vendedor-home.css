@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #ffc700;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100vw;
+  position: relative;
+  background-image: url("../images/lines/header.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: center;
+  z-index: 1000;
+  background-color: #ffc700;
+}
+header .logo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  text-align: center;
+}
+header .logo img {
+  width: 265px;
+  height: auto;
+}
+header .perfil {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+header .perfil img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.15) 5px 6px 4px;
+}
+
+.contenedor__principal {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto 80px;
+  display: block;
+  padding: 0 20px;
+}
+.contenedor__principal .content_sp {
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+.contenedor__principal .content_sp .informacion_vendedor {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.contenedor__principal .content_sp .informacion_vendedor .perfil {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contenedor__principal .content_sp .informacion_vendedor .perfil img {
+  max-width: 64px;
+  width: 100%;
+}
+.contenedor__principal .content_sp .informacion_vendedor h3 {
+  font-weight: bold;
+  word-break: break-word;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.contenedor__principal .content_sp .informacion_vendedor h2 {
+  color: #e1261c;
+  font-weight: bold;
+  word-break: break-word;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.contenedor__principal .content_sp .informacion_vendedor h4 {
+  color: #231f20;
+  font-weight: bold;
+  word-break: break-word;
+  font-size: 1rem;
+}
+.contenedor__principal .content_sp .reporte {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+}
+.contenedor__principal .content_sp .reporte .cta_button {
+  max-width: 300px;
+  width: 100%;
+  display: block;
+  margin: -20px auto 20px;
+  background-color: #e1261c;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.15) 5px 6px 4px;
+}
+.contenedor__principal .content_sp .listado__refaccionarias {
+  width: 100%;
+  display: block;
+  padding: 20px 0;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .refaccionaria {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .refaccionaria p {
+  word-break: break-word;
+  font-size: 1.2rem;
+  color: #e1261c;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item {
+  width: 100%;
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #f2f2f8;
+  align-items: center;
+  justify-content: space-between;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto {
+  width: 20%;
+  text-align: center;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto img {
+  width: 100%;
+  height: auto;
+  max-width: 64px;
+  border-radius: 10px;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto .nombre {
+  font-weight: bold;
+  word-break: break-word;
+  font-size: 1rem;
+  color: #231f20;
+  text-align: center;
+  width: 100%;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto .nombre span {
+  font-weight: bold;
+  color: #e1261c;
+  font-size: 0.6rem;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .informacion_producto {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .informacion_producto p {
+  font-size: 0.8rem;
+  color: #231f20;
+  width: 50%;
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: center;
+}
+
+.puntos {
+  max-width: 1100px;
+  width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 40px auto 0px;
+  background-color: #e1261c;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.puntos .item {
+  width: 45%;
+  text-align: left;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.puntos .item a {
+  background-color: #ffc700;
+  display: block;
+  width: 60%;
+  margin: 0 0 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer {
+  width: 100vw;
+  z-index: -1;
+  position: relative;
+}
+footer img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=vendedor-home.css.map */

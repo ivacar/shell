@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #ffc700;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.venta__nueva {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #f2f2f8;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+.venta__nueva .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+.venta__nueva .close img {
+  max-width: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+.venta__nueva .cuenta_nueva_title {
+  font-size: 1.5rem;
+}
+.venta__nueva .venta-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.venta__nueva .venta-header .logo {
+  width: 100%;
+  text-align: center;
+}
+.venta__nueva .venta-header .logo img {
+  width: 260px;
+}
+.venta__nueva #nueva_venta {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+.venta__nueva #nueva_venta .nota-datos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.venta__nueva #nueva_venta .nota-datos .input {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+}
+.venta__nueva #nueva_venta .nota-datos .input label {
+  width: 100%;
+  font-size: 0.8rem;
+  color: #e1261c;
+  font-weight: bold;
+}
+.venta__nueva #nueva_venta .nota-datos .input input {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+.venta__nueva #nueva_venta .nota-datos .input input:focus {
+  outline: none;
+  border-bottom: 1px solid #ffc700;
+}
+.venta__nueva #nueva_venta .nota-datos .input.md {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.venta__nueva #nueva_venta .nota-datos .input.md label {
+  width: 30%;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.venta__nueva #nueva_venta .nota-datos .input.md input {
+  width: 70%;
+  padding: 0;
+  text-align: end;
+  font-size: 0.8rem;
+  border: none;
+  padding-left: 5px;
+}
+.venta__nueva #nueva_venta .nota-datos .input.mdf {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.venta__nueva #nueva_venta .nota-datos .input.mdf label {
+  width: 30%;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.venta__nueva #nueva_venta .nota-datos .input.mdf input {
+  width: 45%;
+  padding: 0;
+  font-size: 0.8rem;
+  border: none;
+  padding-left: 5px;
+  text-align: end;
+}
+.venta__nueva #nueva_venta .productos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.venta__nueva #nueva_venta .productos .title {
+  width: 100%;
+}
+.venta__nueva #nueva_venta .productos .input {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid rgba(35, 31, 32, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 5px 6px 4px;
+}
+.venta__nueva #nueva_venta .productos .input .imagen {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.venta__nueva #nueva_venta .productos .input .imagen img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.venta__nueva #nueva_venta .productos .input .desc {
+  width: 75%;
+  display: block;
+  text-align: left;
+}
+.venta__nueva #nueva_venta .productos .input .desc h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #e1261c;
+}
+.venta__nueva #nueva_venta .productos .input .desc p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  color: #231f20;
+  text-align: left;
+}
+.venta__nueva #nueva_venta .productos .input .desc .vendidas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.venta__nueva #nueva_venta .productos .input .desc .vendidas label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+  font-weight: bold;
+  width: 60%;
+  color: #e1261c;
+  font-size: 0.8rem;
+}
+.venta__nueva #nueva_venta .productos .input .desc .vendidas input {
+  width: 40%;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #ccc;
+}
+.venta__nueva #nueva_venta .productos .input .desc .vendidas input:focus {
+  outline: none;
+  border-bottom: 1px solid #ffc700;
+}
+.venta__nueva #nueva_venta .full {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  border: none;
+}
+.venta__nueva #nueva_venta .full input {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 2rem;
+  color: #e1261c;
+}
+.venta__nueva #nueva_venta .file-input {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.venta__nueva #nueva_venta .file-input > [type=file] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.venta__nueva #nueva_venta .file-input > .button {
+  display: inline-block;
+  cursor: pointer;
+  background: #e1261c;
+  padding: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 2px;
+  margin-right: 8px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 5px 6px 4px;
+}
+.venta__nueva #nueva_venta .file-input:hover > .button {
+  background: #e1261c;
+  color: white;
+}
+.venta__nueva #nueva_venta .file-input > .label {
+  color: #333;
+  white-space: nowrap;
+  opacity: 0.3;
+  font-size: 0.8rem;
+}
+.venta__nueva #nueva_venta .file-input.-chosen > .label {
+  opacity: 1;
+}
+.venta__nueva #nueva_venta .terminos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  position: relative;
+}
+.venta__nueva #nueva_venta .terminos input {
+  margin-right: 15px;
+}
+.venta__nueva #nueva_venta .terminos label {
+  color: #231f20;
+  font-size: 0.8rem;
+}
+.venta__nueva #nueva_venta .terminos label.error {
+  display: block;
+  text-align: left;
+  font-size: 0.8rem;
+  color: #e1261c;
+  position: absolute;
+  top: 30px;
+  margin-bottom: 0px;
+}
+.venta__nueva #nueva_venta .terminos label#lorem-error {
+  display: block;
+  text-align: left;
+  font-size: 0.8rem;
+  color: #e1261c;
+  position: absolute;
+  top: 45px;
+  margin-bottom: 0px;
+}
+.venta__nueva #nueva_venta .terminos a {
+  color: #e1261c;
+  font-size: 0.8rem;
+}
+.venta__nueva #nueva_venta .input {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 10px;
+}
+.venta__nueva #nueva_venta .input .cta_button {
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #e1261c;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.15) 5px 6px 4px;
+}
+.venta__nueva #nueva_venta p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.venta__nueva #nueva_venta p a {
+  text-decoration: none;
+  color: #e1261c;
+  cursor: pointer;
+}
+.venta__nueva #nueva_venta .imagen_gana {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.venta__nueva #nueva_venta .imagen_gana img {
+  max-width: 256px;
+  width: 100%;
+}
+.venta__nueva p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.venta__nueva p.perfil_creado_title {
+  display: none;
+}
+.venta__nueva .informacion_usuario {
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  display: none;
+  border-radius: 20px;
+  background-color: #f2f2f8;
+  padding: 20px;
+}
+.venta__nueva .informacion_usuario .check {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.venta__nueva .informacion_usuario .check img {
+  max-width: 32px;
+  width: 100%;
+}
+.venta__nueva .informacion_usuario .imagen_user {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.venta__nueva .informacion_usuario .imagen_user img {
+  max-width: 128px;
+  width: 100%;
+}
+.venta__nueva .informacion_usuario .informacion {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.venta__nueva .informacion_usuario .informacion p {
+  font-size: 1rem;
+  line-height: 20%;
+  text-align: center;
+}
+
+.puntos {
+  max-width: 1100px;
+  width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 40px auto 0px;
+  background-color: #e1261c;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.puntos .item {
+  width: 45%;
+  text-align: left;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.puntos .item a {
+  background-color: #ffc700;
+  display: block;
+  width: 60%;
+  margin: 0 0 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+.puntos .item a.checkout {
+  display: none;
+  background-color: #231f20;
+  color: white;
+}/*# sourceMappingURL=ventasv2.css.map */

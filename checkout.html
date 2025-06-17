@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .carrito_item {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .carrito_item img {
+      width: 100px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .carrito_info {
+      flex-grow: 1;
+    }
+
+    .carrito_info p {
+      margin: 5px 0;
+    }
+
+    .acciones button {
+      margin-right: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .acciones {
+      margin-top: 10px;
+    }
+
+    .total {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Carrito de Compras</h1>
+  <div id="carrito_contenido"></div>
+  <p class="total" id="total_items"></p>
+
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script>
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    function renderCarrito() {
+      let html = '';
+      let totalCantidad = 0;
+
+      carrito.forEach(producto => {
+        totalCantidad += producto.cantidad;
+
+        html += `
+          <div class="carrito_item" data-id="${producto.id}">
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <div class="carrito_info">
+              <p><strong>${producto.nombre}</strong> - ${producto.presentacion}</p>
+              <p>Cantidad: <span class="cantidad">${producto.cantidad}</span></p>
+              <div class="acciones">
+                <button class="aumentar">+</button>
+                <button class="disminuir">-</button>
+                <button class="eliminar">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      $('#carrito_contenido').html(html);
+      $('#total_items').text(`Total de productos: ${totalCantidad}`);
+
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+
+    function actualizarCantidad(id, accion) {
+      const index = carrito.findIndex(p => p.id === id);
+      if (index !== -1) {
+        if (accion === 'aumentar') {
+          carrito[index].cantidad += 1;
+        } else if (accion === 'disminuir') {
+          carrito[index].cantidad -= 1;
+          if (carrito[index].cantidad <= 0) {
+            carrito.splice(index, 1);
+          }
+        }
+      }
+      renderCarrito();
+    }
+
+    function eliminarProducto(id) {
+      carrito = carrito.filter(p => p.id !== id);
+      renderCarrito();
+    }
+
+    $(document).ready(function () {
+      renderCarrito();
+
+      $('#carrito_contenido').on('click', '.aumentar', function () {
+        const id = $(this).closest('.carrito_item').data('id');
+        actualizarCantidad(id, 'aumentar');
+      });
+
+      $('#carrito_contenido').on('click', '.disminuir', function () {
+        const id = $(this).closest('.carrito_item').data('id');
+        actualizarCantidad(id, 'disminuir');
+      });
+
+      $('#carrito_contenido').on('click', '.eliminar', function () {
+        const id = $(this).closest('.carrito_item').data('id');
+        eliminarProducto(id);
+      });
+    });
+  </script>
+
+</body>
+</html>

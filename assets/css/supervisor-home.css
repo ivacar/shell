@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #ffc700;
+}
+
+header {
+  width: 100vw;
+  position: relative;
+  z-index: -1;
+}
+header img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  position: absolute;
+}
+
+.contenedor__principal {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 20px;
+}
+.contenedor__principal .header__logo {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.contenedor__principal .header__logo img {
+  max-width: 256px;
+  width: 100%;
+  margin: 0 auto;
+}
+.contenedor__principal .content_sp {
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+}
+.contenedor__principal .content_sp .informacion_supervisor {
+  width: 100%;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #e1261c;
+  padding-bottom: 20px;
+}
+.contenedor__principal .content_sp .informacion_supervisor h3 {
+  font-weight: bold;
+  word-break: break-word;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.contenedor__principal .content_sp .informacion_supervisor h2 {
+  color: #e1261c;
+  font-weight: bold;
+  word-break: break-word;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.contenedor__principal .content_sp .informacion_supervisor h4 {
+  color: #231f20;
+  font-weight: bold;
+  word-break: break-word;
+  font-size: 1.2rem;
+}
+.contenedor__principal .content_sp .reporte {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e1261c;
+}
+.contenedor__principal .content_sp .reporte h5 {
+  font-weight: bold;
+  word-break: break-word;
+  font-size: 1rem;
+}
+.contenedor__principal .content_sp .listado__refaccionarias {
+  width: 100%;
+  display: block;
+  padding: 20px 0;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .refaccionaria {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .refaccionaria p {
+  word-break: break-word;
+  font-size: 1.2rem;
+  color: #e1261c;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item {
+  width: 100%;
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #f2f2f8;
+  align-items: center;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto {
+  width: 20%;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto img {
+  width: 100%;
+  height: auto;
+  max-width: 64px;
+  border-radius: 10px;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .informacion_producto {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .informacion_producto h4 {
+  font-weight: bold;
+  word-break: break-word;
+  font-size: 1rem;
+  color: #231f20;
+}
+.contenedor__principal .content_sp .listado__refaccionarias .item .informacion_producto p {
+  font-size: 0.8rem;
+  color: #231f20;
+  font-weight: normal;
+}
+.contenedor__principal .cta_button {
+  max-width: 300px;
+  width: 100%;
+  display: block;
+  margin: -20px auto 20px;
+  background-color: #e1261c;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.15) 5px 6px 4px;
+}
+
+footer {
+  width: 100vw;
+  z-index: -1;
+  position: relative;
+}
+footer img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=supervisor-home.css.map */

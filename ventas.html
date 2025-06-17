@@ -1,13 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shell | Venta</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Shell | Ventas</title>
+      <link rel="stylesheet" href="assets/css/venta.css">
 </head>
+
 <body>
-    <header></header>
-    <div class="contenedor__section"></div>
-    <footer></footer>
+
+      <div class="venta__nueva">
+            <div class="close">
+                  <img src="assets/images/icons/close.png" alt="" class="close_back">
+            </div>
+            <p class="cuenta_nueva_title">Venta nueva</p>
+            <div class="venta-header">
+                  <div class="logo">
+                        <img src="assets/images/icons/logo_shell.png" alt="">
+                  </div>
+            </div>
+            <form action="" id="nueva_venta">
+
+                  <div class="nota-datos">
+                        <div class="input md">
+                              <label for="fecha">Fecha</label>
+                              <input type="text" name="fecha" class="fecha" id="fecha" value="dd/mm/aaaa" />
+                        </div>
+                        <div class="input mdf">
+                              <label for="folio">Folio</label>
+                              <input type="text" name="folio" class="folio" id="folio" value="000054" />
+                        </div>
+                        <div class="input">
+                              <label for="id-refaccionarioa">ID Refaccionaria</label>
+                              <input type="text" name="id-refaccionarioa" class="id-refaccionarioa"
+                                    id="id-refaccionarioa" value="0157-idney" />
+                        </div>
+                        <div class="input">
+                              <label for="">Refaccionaria</label>
+                              <input type="text" name="Refaccionaria" class="Refaccionaria" id="Refaccionaria"
+                                    value="Caminio real Tehuacan" />
+                        </div>
+                        <div class="input">
+                              <label for="">Nombre Vendedor</label>
+                              <input type="text" name="vendedor" class="vendedor" id="vendedor"
+                                    value="Juan perez gomez" />
+                        </div>
+                  </div>
+
+
+                  <div class="productos">
+                        <p class="title">Prodcutos Vendidos</p>
+                        <div class="input">
+                              <input type="checkbox" name="R3X" class="R3X custom-box" id="R3X" />
+                              <label for="R3X">R3X</label>
+
+                        </div>
+                        <div class="input">
+                              <input type="checkbox" name="R4" class="R4 custom-box" id="R4" />
+                              <label for="R4">R4</label>
+
+                        </div>
+                        <div class="input">
+                              <input type="checkbox" name="R4X" class="R4X custom-box" id="R4X" />
+                              <label for="R4X">R4X</label>
+
+                        </div>
+                        <div class="input">
+                              <input type="checkbox" name="R4L" class="R4L custom-box" id="R4L" />
+                              <label for="R4L">R4L</label>
+
+                        </div>
+                        <div class="input">
+                              <input type="checkbox" name="R5" class="R5 custom-box" id="R5" />
+                              <label for="R5">R5</label>
+
+                        </div>
+                        <p class="title">Presentaciones</p>
+                        <div class="input">
+                              <input type="checkbox" name="G5" class="G5 custom-box" id="G5" />
+                              <label for="G5">5 Lts</label>
+
+                        </div>
+                        <div class="input">
+                              <input type="checkbox" name="C19" class="C19 custom-box" id="C19" />
+                              <label for="C19">19 Lts</label>
+
+                        </div>
+                        <p class="title">Total de litros vendidos</p>
+                        <div class="input full">
+                              <input type="number" name="litros" class="litros" id="litros" />
+
+                        </div>
+                        <p class="title">Subir comprobante</p>
+                        <div class="file-input">
+                              <input type="file" name="file" class="file" id="file" />
+                              <span class='button'>Subir foto</span>
+                              <span class='label' data-js-label>Foto no seleccionada</label>
+                        </div>
+                  </div>
+                  <div class="terminos">
+                        <input type="checkbox" id="lorem" name="lorem" />
+                        <label for="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, suscipit ea
+                              fuga accusamus veritatis, perspiciatis, voluptate eos officiis sequi excepturi ex est
+                              cumque. </label>
+                  </div>
+                  <div class="terminos">
+                        <input type="checkbox" id="terminos" name="terminos" />
+                        <label for="terminos">Acepto los <a href="">Términos y Condiciones</a></label>
+                  </div>
+                  <div class="input">
+                        <button type="submit" class="cta_button">Enviar Venta</button>
+                  </div>
+
+                  <div class="imagen_gana">
+                        <img src="assets/images/icons/logo_shell.png" alt="">
+                  </div>
+            </form>
+      </div>
+      <footer>
+            <img src="assets/images/lines/footer.png" alt="">
+      </footer>
+      <script src="assets/js/jquery-3.7.1.min.js"></script>
+      <script>
+            $(document).ready(function () {
+                  $('.add').on('click', function () {
+                        $('.canje').hide();        // Oculta el botón "Canjear"
+                        $('.checkout').css('display', 'block');     // Muestra el botón "Validar Venta"
+                  });
+                  // Also see: https://www.quirksmode.org/dom/inputfile.html
+
+                  var inputs = document.querySelectorAll('.file-input')
+
+                  for (var i = 0, len = inputs.length; i < len; i++) {
+                        customInput(inputs[i])
+                  }
+
+                  function customInput(el) {
+                        const fileInput = el.querySelector('[type="file"]')
+                        const label = el.querySelector('[data-js-label]')
+
+                        fileInput.onchange =
+                              fileInput.onmouseout = function () {
+                                    if (!fileInput.value) return
+
+                                    var value = fileInput.value.replace(/^.*[\\\/]/, '')
+                                    el.className += ' -chosen'
+                                    label.innerText = value
+                              }
+                  }
+            });
+      </script>
+
 </body>
+
 </html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Shell | Ventas</title>
+      <link rel="stylesheet" href="assets/css/ventasv2.css">
+</head>
+
+<body>
+
+      <div class="venta__nueva">
+            <div class="close">
+                  <img src="assets/images/icons/close.png" alt="" class="close_back">
+            </div>
+            <p class="cuenta_nueva_title">Venta nueva</p>
+            <div class="venta-header">
+                  <div class="logo">
+                        <img src="assets/images/icons/logo_shell.png" alt="">
+                  </div>
+            </div>
+            <form action="" id="nueva_venta">
+
+                  <div class="nota-datos">
+                        <div class="input md">
+                              <label for="fecha">Fecha</label>
+                              <input type="text" name="fecha" class="fecha" id="fecha" value="dd/mm/aaaa" />
+                        </div>
+                        <div class="input mdf">
+                              <label for="folio">Folio</label>
+                              <input type="text" name="folio" class="folio" id="folio" value="000054" />
+                        </div>
+                        <div class="input">
+                              <label for="id-refaccionarioa">ID Refaccionaria</label>
+                              <input type="text" name="id-refaccionarioa" class="id-refaccionarioa"
+                                    id="id-refaccionarioa" value="0157-idney" />
+                        </div>
+                        <div class="input">
+                              <label for="">Refaccionaria</label>
+                              <input type="text" name="Refaccionaria" class="Refaccionaria" id="Refaccionaria"
+                                    value="Caminio real Tehuacan" />
+                        </div>
+                        <div class="input">
+                              <label for="">Nombre Vendedor</label>
+                              <input type="text" name="vendedor" class="vendedor" id="vendedor"
+                                    value="Juan perez gomez" />
+                        </div>
+                  </div>
+
+
+                  <div class="productos">
+                        <p class="title">Prodcutos Vendidos</p>
+                        <div class="input">
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/GarR3X.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R3X</h4>
+                                    <p>Galon 5L</p>
+                                    <div class="vendidas">
+                                          <label for="GR3X">Piezas Vendidas</label>
+                                          <input type="number" name="GR3X" class="GR3X litro-input" id="GR3X" data-litros="5" />
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="input">
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR3X.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R3X</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR3X">Piezas Vendidas</label>
+                                          <input type="number" name="CR3X" class="CR3X litro-input" id="CR3X" data-litros="19" />
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="input">
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR4.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R4</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR4">Piezas Vendidas</label>
+                                          <input type="number" name="CR4" class="CR4 litro-input" id="CR4" data-litros="19" />
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="input">
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/GarR4L.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R4L</h4>
+                                    <p>Galon 5L</p>
+                                    <div class="vendidas">
+                                          <label for="GR4L">Piezas Vendidas</label>
+                                          <input type="number" name="GR4L" class="GR4L litro-input" id="GR4L" data-litros="5" />
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="input">
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR4L.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R4L</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR4L">Piezas Vendidas</label>
+                                          <input type="number" name="CR4L" class="CR4L litro-input" id="CR4L" data-litros="19" />
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="input">
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR4X.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R4X</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR4X">Piezas Vendidas</label>
+                                          <input type="number" name="CR4X" class="CR4X litro-input" id="CR4X" data-litros="19" />
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="input">
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR5LE.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R5LE</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR5LE">Piezas Vendidas</label>
+                                          <input type="number" name="CR5LE" class="CR5LE litro-input" id="CR5LE"
+                                                data-litros="19" />
+                                    </div>
+                              </div>
+                        </div>
+                        <p class="title">Total de litros vendidos</p>
+                        <div class="full">
+                              <input type="number" name="litros" class="litros" id="total-litros" />
+                        </div>
+                        <p class="title">Subir comprobante</p>
+                        <div class="file-input">
+                              <input type="file" name="file" class="file" id="file" />
+                              <span class='button'>Subir foto</span>
+                              <span class='label' data-js-label>Foto no seleccionada</label>
+                        </div>
+                  </div>
+                  <div class="terminos">
+                        <input type="checkbox" id="lorem" name="lorem" />
+                        <label for="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, suscipit ea
+                              fuga accusamus veritatis, perspiciatis, voluptate eos officiis sequi excepturi ex est
+                              cumque. </label>
+                  </div>
+                  <div class="terminos">
+                        <input type="checkbox" id="terminos" name="terminos" />
+                        <label for="terminos">Acepto los <a href="">Términos y Condiciones</a></label>
+                  </div>
+                  <div class="input">
+                        <button type="submit" class="cta_button">Enviar Venta</button>
+                  </div>
+
+                  <div class="imagen_gana">
+                        <img src="assets/images/icons/logo_shell.png" alt="">
+                  </div>
+            </form>
+      </div>
+
+      <script src="assets/js/jquery-3.7.1.min.js"></script>
+      <script>
+            $(document).ready(function () {
+                  $('.add').on('click', function () {
+                        $('.canje').hide();        // Oculta el botón "Canjear"
+                        $('.checkout').css('display', 'block');     // Muestra el botón "Validar Venta"
+                  });
+                  // Also see: https://www.quirksmode.org/dom/inputfile.html
+
+                  var inputs = document.querySelectorAll('.file-input')
+
+                  for (var i = 0, len = inputs.length; i < len; i++) {
+                        customInput(inputs[i])
+                  }
+
+                  function customInput(el) {
+                        const fileInput = el.querySelector('[type="file"]')
+                        const label = el.querySelector('[data-js-label]')
+
+                        fileInput.onchange =
+                              fileInput.onmouseout = function () {
+                                    if (!fileInput.value) return
+
+                                    var value = fileInput.value.replace(/^.*[\\\/]/, '')
+                                    el.className += ' -chosen'
+                                    label.innerText = value
+                              }
+                  }
+            });
+      </script>
+      <script src="assets/js/ventasv2.js"></script>
+      
+      <script>
+            const inputs = document.querySelectorAll('.litro-input');
+            const totalLitros = document.getElementById('total-litros');
+
+            function actualizarTotal() {
+                  let total = 0;
+
+                  inputs.forEach(input => {
+                        const cantidad = parseFloat(input.value) || 0;
+                        const litros = parseFloat(input.dataset.litros) || 0;
+                        total += cantidad * litros;
+                  });
+
+                  totalLitros.value = total; // Muestra el total, por ejemplo: 82.00
+            }
+
+            // Escuchar cambios
+            inputs.forEach(input => {
+                  input.addEventListener('input', actualizarTotal);
+            });
+
+            // Calcular total inicial
+            actualizarTotal();
+      </script>
+</body>
+
+</html>

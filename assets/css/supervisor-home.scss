@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+$amarillo: #ffc700ff;
+$rojo: #e1261cff;
+$basebody: #f2f2f8ff;
+$azul: #231f20ff;
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+      background-color: $amarillo;
+}
+
+header {
+      width: 100vw;
+      position: relative;
+      z-index: -1;
+
+      img {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            display: block;
+            position: absolute;
+      }
+}
+
+.contenedor__principal {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      padding: 20px;
+
+      .header__logo {
+            width: 100%;
+            display: block;
+            text-align: center;
+
+            img {
+                  max-width: 256px;
+                  width: 100%;
+                  margin: 0 auto;
+            }
+      }
+
+      .content_sp {
+            width: 100%;
+            display: block;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 30px;
+
+            .informacion_supervisor {
+                  width: 100%;
+                  display: block;
+                  text-align: center;
+                  border-bottom: 1px solid $rojo;
+                  padding-bottom: 20px;
+
+                  h3 {
+                        font-weight: bold;
+                        word-break: break-word;
+                        font-size: 1rem;
+                        margin-bottom: 10px
+                  }
+
+                  h2 {
+                        color: $rojo;
+                        font-weight: bold;
+                        word-break: break-word;
+                        font-size: 1.6rem;
+                        margin-bottom: 10px;
+                  }
+
+                  h4 {
+                        color: $azul;
+                        font-weight: bold;
+                        word-break: break-word;
+                        font-size: 1.2rem;
+                  }
+            }
+
+            .reporte {
+                  width: 100%;
+                  display: block;
+                  text-align: center;
+                  padding: 20px 0;
+                  border-bottom: 1px solid $rojo;
+
+                  h5 {
+                        font-weight: bold;
+                        word-break: break-word;
+                        font-size: 1rem;
+                  }
+            }
+
+            .listado__refaccionarias {
+                  width: 100%;
+                  display: block;
+                  padding: 20px 0;
+
+                  .refaccionaria {
+                        width: 100%;
+                        display: block;
+                        margin-bottom: 20px;
+                        text-align: center;
+
+                        p {
+                              word-break: break-word;
+                              font-size: 1.2rem;
+                              color: $rojo;
+                              font-weight: bold;
+                              margin-bottom: 5px;
+                        }
+                  }
+
+                  .item {
+                        width: 100%;
+                        display: flex;
+                        padding: 15px 0;
+                        border-bottom: 1px solid $basebody;
+                        align-items: center;
+
+                        .imagen_producto {
+                              width: 20%;
+
+                              img {
+                                    width: 100%;
+                                    height: auto;
+                                    max-width: 64px;
+                                    border-radius: 10px;
+                              }
+                        }
+
+                        .informacion_producto {
+                              width: 80%;
+                              display: flex;
+                              align-items: center;
+                              justify-content: space-evenly;
+
+                              h4 {
+                                    font-weight: bold;
+                                    word-break: break-word;
+                                    font-size: 1rem;
+                                    color: $azul;
+                              }
+
+                              p {
+                                    font-size: 0.8rem;
+                                    color: $azul;
+                                    font-weight: normal;
+                              }
+                        }
+                  }
+            }
+      }
+
+      .cta_button {
+            max-width: 300px;
+            width: 100%;
+            display: block;
+            margin: -20px auto 20px;
+            background-color: $rojo;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.15) 5px 6px 4px;
+      }
+}
+
+footer {
+      width: 100vw;
+      z-index: -1;
+      position: relative;
+
+      img {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+      }
+}
