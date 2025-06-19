@@ -22,8 +22,44 @@ $(document).ready(function () {
       }
     },
     submitHandler: function (form) {
-      form.submit(); // Aquí puedes hacer AJAX si quieres
+      $.ajax({
+        url: 'http://localhost/shell/login.php',
+        type: 'POST',
+        data: $(form).serialize(),
+        dataType: 'json',
+        success: function (response) {
+          if (response.status === 'success') {
+            Swal.fire({
+              icon: 'success',
+              title: '¡Bienvenido!',
+              text: response.message,
+              confirmButtonText: 'Continuar',
+              timer: 2000,
+              showConfirmButton: false
+            });
+            setTimeout(function () {
+              window.location.href = 'vendedor-home.html';
+            }, 2000);
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: response.message,
+              confirmButtonText: 'Intentar de nuevo'
+            });
+          }
+        },
+        error: function () {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Servidor no responde',
+            text: 'Revisa tu conexión o contacta al administrador',
+            confirmButtonText: 'Ok'
+          });
+        }
+      });
     }
+
   });
 
 

@@ -80,12 +80,13 @@ body {
 
                   .input {
                         width: 100%;
-                        margin-bottom: 20px;
+                        margin-bottom: 0px;
                         display: flex;
                         align-items: flex-end;
                         justify-content: space-between;
                         position: relative;
                         flex-wrap: wrap;
+                        padding: 5px 0;
 
                         label {
                               width: 100%;
@@ -189,27 +190,30 @@ body {
 
                         .desc {
                               width: 75%;
-                              display: block;
+                              display: flex;
+                              flex-wrap: wrap;
                               text-align: left;
 
                               h4 {
                                     font-size: 1rem;
                                     margin-bottom: 5px;
                                     color: $rojo;
+                                    width: 50%;
                               }
 
                               p {
                                     font-size: 0.8rem;
                                     margin-bottom: 0;
                                     color: $azul;
-                                    text-align: left;
+                                    text-align: right;
+                                    width: 50%;
                               }
 
                               .vendidas {
                                     width: 100%;
+                                    margin-top: 15px;
                                     display: flex;
                                     align-items: center;
-
                                     label {
                                           display: flex;
                                           align-items: center;
@@ -221,19 +225,41 @@ body {
                                           font-size: 0.8rem;
                                     }
 
-                                    input {
+                                    .downup {
                                           width: 40%;
-                                          padding: 5px 10px;
-                                          border: none;
-                                          background-color: transparent;
-                                          font-size: 0.8rem;
-                                          border-bottom: 1px solid #ccc;
+                                          display: flex;
+                                          align-items: center;
+                                          a{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                width: 30px;
+                                                height: 30px;
+                                                background-color: $rojo;
+                                                color: white;
+                                                // border-radius: 50%;
+                                                text-decoration: none;
+                                                font-size: 1.2rem;
+                                                // margin-right: 5px;
+                                          }
+                                          input {
+                                                width: 40%;
+                                                padding: 5px 10px;
+                                                border: none;
+                                                height: 30px;
+                                                text-align: center;
+                                                background-color: transparent;
+                                                font-size: 0.8rem;
+                                                // border: 1px solid #ccc;
 
-                                          &:focus {
-                                                outline: none;
-                                                border-bottom: 1px solid $amarillo;
+                                                &:focus {
+                                                      outline: none;
+                                                      border-bottom: 1px solid $amarillo;
+                                                }
                                           }
                                     }
+
+
                               }
                         }
 
@@ -251,7 +277,7 @@ body {
                   position: relative;
                   flex-wrap: wrap;
                   border: none;
-               
+
                   input {
                         width: 100%;
                         text-align: center;
@@ -261,7 +287,7 @@ body {
                         background-color: transparent;
                         font-size: 2rem;
                         color: $rojo;
-                      
+
                   }
             }
 

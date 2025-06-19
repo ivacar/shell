@@ -154,7 +154,6 @@ header {
                         display: block;
                         margin-bottom: 20px;
                         text-align: center;
-
                         p {
                               word-break: break-word;
                               font-size: 1.2rem;
@@ -162,59 +161,61 @@ header {
                               font-weight: bold;
                               margin-bottom: 5px;
                         }
-                  }
-
-                  .item {
-                        width: 100%;
-                        display: flex;
-                        padding: 15px 0;
-                        border-bottom: 1px solid $basebody;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        .imagen_producto {
-                              width: 20%;
-                              text-align: center;
-
-                              img {
+                        .filtro{
+                              display: block;
+                              margin-top: 20px;
+                              select{
                                     width: 100%;
-                                    height: auto;
-                                    max-width: 64px;
-                                    border-radius: 10px;
-                              }
-
-                              .nombre {
-                                    font-weight: bold;
-                                    word-break: break-word;
+                                    padding: 8px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 5px;
                                     font-size: 1rem;
                                     color: $azul;
+                                    background-color: white;
                                     text-align: center;
-                                    width: 100%;
-
-                                    span {
-                                          font-weight: bold;
-                                          color: $rojo;
-                                          font-size: 0.6rem;
-
-                                    }
+                                   
                               }
                         }
+                  }
 
-                        .informacion_producto {
-                              width: 70%;
-                              display: flex;
-                              flex-wrap: wrap;
-                              align-items: center;
-                              justify-content: space-evenly;
+                  #no-more-tables {
+                        width: 100%;
+                        display: block;
+                        margin: 0 auto;
 
+                        table {
+                              width: 100%;
+                              border-collapse: collapse;
+                              overflow: hidden;
 
-                              p {
-                                    font-size: 0.8rem;
-                                    color: $azul;
-                                    width: 50%;
-                                    line-height: 1.5;
-                                    font-weight: normal;
-                                    text-align: center;
+                              thead {
+                                    background-color: $rojo;
+                                    color: white;
+
+                                    th {
+                                          padding: 10px;
+                                          text-align: center;
+                                          font-weight: bold;
+                                    }
+                              }
+
+                              tbody {
+                                    tr {
+                                          td {
+                                                padding: 10px;
+                                                border-bottom: 1px solid #ddd;
+                                                font-size: 1rem;
+                                                color: $azul;
+                                                text-align: center;
+                                                // &:last-child {
+                                                //       text-align: center;
+                                                // }
+                                          }
+
+                                          &:nth-child(even) {
+                                                background-color: #f2f2f2; // gris claro, cámbialo si necesitas otro tono
+                                          }
+                                    }
                               }
                         }
                   }
@@ -237,17 +238,19 @@ header {
       bottom: 0;
       left: 0;
       right: 0;
-      .item{
+
+      .item {
             width: 45%;
             text-align: left;
             color: white;
             font-size: 1rem;
             font-weight: 500;
-            a{
+
+            a {
                   background-color: $amarillo;
                   display: block;
                   width: 60%;
-                  margin: 0  0 0 auto;
+                  margin: 0 0 0 auto;
                   padding: 10px;
                   border-radius: 5px;
                   color: white;
@@ -271,5 +274,60 @@ footer {
             position: absolute;
             bottom: 0;
             right: 0;
+      }
+}
+
+@media only screen and (max-width: 800px) {
+
+      /* Force table to not be like tables anymore */
+      #no-more-tables table,
+      #no-more-tables thead,
+      #no-more-tables tbody,
+      #no-more-tables th,
+      #no-more-tables td,
+      #no-more-tables tr {
+            display: block;
+      }
+
+      /* Hide table headers (but not display: none;, for accessibility) */
+      #no-more-tables thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+      }
+
+      #no-more-tables tr {
+            border: 1px solid #ccc;
+      }
+
+      #no-more-tables td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50% !important;
+            white-space: normal;
+            text-align: left;
+            font-size: 0.8rem !important;
+      }
+
+      #no-more-tables td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+      }
+
+      /*
+	Label the data
+	*/
+      #no-more-tables td:before {
+            content: attr(data-title);
       }
 }

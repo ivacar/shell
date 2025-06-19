@@ -66,12 +66,13 @@ body {
 }
 .venta__nueva #nueva_venta .nota-datos .input {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   position: relative;
   flex-wrap: wrap;
+  padding: 5px 0;
 }
 .venta__nueva #nueva_venta .nota-datos .input label {
   width: 100%;
@@ -161,22 +162,26 @@ body {
 }
 .venta__nueva #nueva_venta .productos .input .desc {
   width: 75%;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   text-align: left;
 }
 .venta__nueva #nueva_venta .productos .input .desc h4 {
   font-size: 1rem;
   margin-bottom: 5px;
   color: #e1261c;
+  width: 50%;
 }
 .venta__nueva #nueva_venta .productos .input .desc p {
   font-size: 0.8rem;
   margin-bottom: 0;
   color: #231f20;
-  text-align: left;
+  text-align: right;
+  width: 50%;
 }
 .venta__nueva #nueva_venta .productos .input .desc .vendidas {
   width: 100%;
+  margin-top: 15px;
   display: flex;
   align-items: center;
 }
@@ -190,15 +195,32 @@ body {
   color: #e1261c;
   font-size: 0.8rem;
 }
-.venta__nueva #nueva_venta .productos .input .desc .vendidas input {
+.venta__nueva #nueva_venta .productos .input .desc .vendidas .downup {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.venta__nueva #nueva_venta .productos .input .desc .vendidas .downup a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #e1261c;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.venta__nueva #nueva_venta .productos .input .desc .vendidas .downup input {
   width: 40%;
   padding: 5px 10px;
   border: none;
+  height: 30px;
+  text-align: center;
   background-color: transparent;
   font-size: 0.8rem;
-  border-bottom: 1px solid #ccc;
 }
-.venta__nueva #nueva_venta .productos .input .desc .vendidas input:focus {
+.venta__nueva #nueva_venta .productos .input .desc .vendidas .downup input:focus {
   outline: none;
   border-bottom: 1px solid #ffc700;
 }

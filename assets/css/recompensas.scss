@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+$amarillo: #ffc700ff;
+$rojo: #e1261cff;
+$basebody: #f2f2f8ff;
+$azul: #231f20ff;
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+      background-color: $basebody;
+      overflow-x: hidden;
+      padding: 20px;
+}
+
+header {
+      width: 100%;
+      display: block;
+
+      img {
+            max-width: 260px;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+      }
+}
+
+.banner {
+      background: $rojo;
+      padding: 10px;
+      text-align: center;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 1100px;
+      width: 100%;
+      h2 {
+            font-size: 2rem;
+            color: white;
+            font-weight: 900;
+            word-break: break-word;
+            margin-bottom: 10px
+      }
+
+      h3 {
+            font-size: 1.5rem;
+            color: white;
+            word-break: break-word;
+            margin-bottom: 10px;
+      }
+
+      p {
+            font-size: 1.2rem;
+            color: white;
+            word-break: break-word;
+            font-weight: bold;
+            margin-bottom: 10px;
+      }
+}
+
+.nota {
+      width: 100%;
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      max-width: 1100px;
+      width: 100%;
+      p {
+            font-size: 1rem;
+      }
+}
+
+.accordion {
+      max-width: 1100px;
+      width: 100%;
+      margin: 20px auto;
+      padding-bottom: 40px;
+      .accordion-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border: 1px solid #ddd;
+
+            .accordion-header {
+                  padding: 1rem;
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                  font-weight: bold;
+                  img{
+                        max-width: 100px;
+                        width: 100%;
+                       
+                  }
+            }
+
+            .accordion-content {
+                  display: none;
+                  padding: 1rem;
+                  background: #fafafa;
+
+                  .reward-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 0.8rem;
+
+                        span {
+                              flex: 1;
+                              margin-left: 10px;
+                              font-weight: bold;
+                              font-size: 1rem;
+                        }
+
+                        button {
+                              background: #28a745;
+                              color: white;
+                              border: none;
+                              cursor: pointer;
+                              padding: 0.3rem 0.8rem;
+                              border-radius: 5px;
+                        }
+                  }
+            }
+      }
+}
+.banner__canje {
+      max-width: 1100px;
+      width: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 40px auto 0px;
+      background-color: $rojo;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      .puntos {
+            width: 70%;
+            text-align: left;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            p{
+                  margin: 0;
+                  font-size: 0.8rem;
+                  font-weight: bold;
+            }
+      }
+      .item {
+            width: 30%;
+            text-align: right;
+            
+            a {
+                  background-color: $amarillo;
+                  display: block;
+                  width: 100%;
+                  margin: 0 0 0 auto;
+                  padding: 10px;
+                  border-radius: 5px;
+                  color:white;
+                  text-decoration: none;
+                  font-weight: bold;
+                  text-align: center;
+                  box-shadow: rgba(0, 0, 0, 0.15) 5px 6px 4px;
+            }
+      }
+}

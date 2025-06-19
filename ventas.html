@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Shell | Ventas</title>
-      <link rel="stylesheet" href="assets/css/venta.css">
+      <link rel="stylesheet" href="assets/css/ventasv2.css">
 </head>
 
 <body>
@@ -23,28 +23,29 @@
             <form action="" id="nueva_venta">
 
                   <div class="nota-datos">
-                        <div class="input md">
-                              <label for="fecha">Fecha</label>
-                              <input type="text" name="fecha" class="fecha" id="fecha" value="dd/mm/aaaa" />
-                        </div>
-                        <div class="input mdf">
+                        <div class="input">
                               <label for="folio">Folio</label>
-                              <input type="text" name="folio" class="folio" id="folio" value="000054" />
+                              <input type="text" name="folio" class="folio" id="folio" placeholder="0000" />
                         </div>
+                        <div class="input">
+                              <label for="fecha">Fecha</label>
+                              <input type="text" name="fecha" class="fecha" id="fecha" value="" readonly />
+                        </div>
+
                         <div class="input">
                               <label for="id-refaccionarioa">ID Refaccionaria</label>
                               <input type="text" name="id-refaccionarioa" class="id-refaccionarioa"
-                                    id="id-refaccionarioa" value="0157-idney" />
+                                    id="id-refaccionarioa" value="0157-idney" readonly />
                         </div>
                         <div class="input">
                               <label for="">Refaccionaria</label>
                               <input type="text" name="Refaccionaria" class="Refaccionaria" id="Refaccionaria"
-                                    value="Caminio real Tehuacan" />
+                                    value="Caminio real Tehuacan" readonly />
                         </div>
                         <div class="input">
                               <label for="">Nombre Vendedor</label>
-                              <input type="text" name="vendedor" class="vendedor" id="vendedor"
-                                    value="Juan perez gomez" />
+                              <input type="text" name="vendedor" class="vendedor" id="vendedor" value="Juan perez gomez"
+                                    readonly />
                         </div>
                   </div>
 
@@ -52,59 +53,155 @@
                   <div class="productos">
                         <p class="title">Prodcutos Vendidos</p>
                         <div class="input">
-                              <input type="checkbox" name="R3X" class="R3X custom-box" id="R3X" />
-                              <label for="R3X">R3X</label>
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/GarR3X.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R3X</h4>
+                                    <p>Galon 5L</p>
+                                    <div class="vendidas">
+                                          <label for="GR3X">Vendidos</label>
+                                          <div class="downup">
+                                                <a data-action="down" onclick="updateSpinner(this);">-</a>
+                                                <input type="text" name="GR3X" class="GR3X litro-input" id="GR3X"
+                                                      data-litros="5" data-puntos="1.50" value="0" />
+                                                <a data-action="up" onclick="updateSpinner(this);">+</a>
+                                          </div>
 
+                                    </div>
+                              </div>
                         </div>
                         <div class="input">
-                              <input type="checkbox" name="R4" class="R4 custom-box" id="R4" />
-                              <label for="R4">R4</label>
-
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR3X.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R3X</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR3X">Vendidos</label>
+                                          <div class="downup">
+                                                <a data-action="down" onclick="updateSpinner(this);">-</a>
+                                                <input type="number" name="CR3X" class="CR3X litro-input" id="CR3X"
+                                                      data-litros="19" data-puntos="1.50" value="0" />
+                                                <a data-action="up" onclick="updateSpinner(this);">+</a>
+                                          </div>
+                                    </div>
+                              </div>
                         </div>
                         <div class="input">
-                              <input type="checkbox" name="R4X" class="R4X custom-box" id="R4X" />
-                              <label for="R4X">R4X</label>
-
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR4.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R4</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR4">Vendidos</label>
+                                          <div class="downup">
+                                                <a data-action="down" onclick="updateSpinner(this);">-</a>
+                                                <input type="number" name="CR4" class="CR4 litro-input" id="CR4"
+                                                      data-litros="19" data-puntos="1.50" value="0" />
+                                                <a data-action="up" onclick="updateSpinner(this);">+</a>
+                                          </div>
+                                    </div>
+                              </div>
                         </div>
                         <div class="input">
-                              <input type="checkbox" name="R4L" class="R4L custom-box" id="R4L" />
-                              <label for="R4L">R4L</label>
-
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/GarR4L.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R4L</h4>
+                                    <p>Galon 5L</p>
+                                    <div class="vendidas">
+                                          <label for="GR4L">Vendidos</label>
+                                          <div class="downup">
+                                                <a data-action="down" onclick="updateSpinner(this);">-</a>
+                                                <input type="number" name="GR4L" class="GR4L litro-input" id="GR4L"
+                                                      data-litros="5" data-puntos="1.50" value="0" />
+                                                <a data-action="up" onclick="updateSpinner(this);">+</a>
+                                          </div>
+                                    </div>
+                              </div>
                         </div>
                         <div class="input">
-                              <input type="checkbox" name="R5" class="R5 custom-box" id="R5" />
-                              <label for="R5">R5</label>
-
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR4L.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R4L</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR4L">Vendidos</label>
+                                          <div class="downup">
+                                                <a data-action="down" onclick="updateSpinner(this);">-</a>
+                                                <input type="number" name="CR4L" class="CR4L litro-input" id="CR4L"
+                                                      data-litros="19" data-puntos="1.50" value="0" />
+                                                <a data-action="up" onclick="updateSpinner(this);">+</a>
+                                          </div>
+                                    </div>
+                              </div>
                         </div>
-                        <p class="title">Presentaciones</p>
                         <div class="input">
-                              <input type="checkbox" name="G5" class="G5 custom-box" id="G5" />
-                              <label for="G5">5 Lts</label>
-
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR4X.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R4X</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR4X">Vendidos</label>
+                                          <div class="downup">
+                                                <a data-action="down" onclick="updateSpinner(this);">-</a>
+                                                <input type="number" name="CR4X" class="CR4X litro-input" id="CR4X"
+                                                      data-litros="19" data-puntos="1.50" value="0" />
+                                                <a data-action="up" onclick="updateSpinner(this);">+</a>
+                                          </div>
+                                    </div>
+                              </div>
                         </div>
                         <div class="input">
-                              <input type="checkbox" name="C19" class="C19 custom-box" id="C19" />
-                              <label for="C19">19 Lts</label>
-
+                              <div class="imagen">
+                                    <img src="assets/images/prodcutos/CubR5LE.png" alt="">
+                              </div>
+                              <div class="desc">
+                                    <h4>R5LE</h4>
+                                    <p>Cubeta 19L</p>
+                                    <div class="vendidas">
+                                          <label for="CR5LE">Vendidos</label>
+                                          <div class="downup">
+                                                <a data-action="down" onclick="updateSpinner(this);">-</a>
+                                                <input type="number" name="CR5LE" class="CR5LE litro-input" id="CR5LE"
+                                                      data-litros="19" data-puntos="2.00" value="0" />
+                                                <a data-action="up" onclick="updateSpinner(this);">+</a>
+                                          </div>
+                                    </div>
+                              </div>
                         </div>
                         <p class="title">Total de litros vendidos</p>
-                        <div class="input full">
-                              <input type="number" name="litros" class="litros" id="litros" />
-
+                        <div class="full">
+                              <input type="number" name="litros" class="litros" id="total-litros" readonly value="0"/>
+                        </div>
+                        <p class="title">Total de puntos generados</p>
+                        <div class="full">
+                              <input type="number" name="puntosgenerados" class="puntosgenerados"
+                                    id="total-puntosgenerados" readonly value="0" />
                         </div>
                         <p class="title">Subir comprobante</p>
                         <div class="file-input">
-                              <input type="file" name="file" class="file" id="file" />
+                              <input type="file" name="file" class="file" id="file"
+                                    accept="image/png, image/gif, image/jpeg" />
                               <span class='button'>Subir foto</span>
                               <span class='label' data-js-label>Foto no seleccionada</label>
                         </div>
                   </div>
-                  <div class="terminos">
+                  <!-- <div class="terminos">
                         <input type="checkbox" id="lorem" name="lorem" />
                         <label for="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, suscipit ea
                               fuga accusamus veritatis, perspiciatis, voluptate eos officiis sequi excepturi ex est
                               cumque. </label>
-                  </div>
+                  </div> -->
                   <div class="terminos">
                         <input type="checkbox" id="terminos" name="terminos" />
                         <label for="terminos">Acepto los <a href="">Términos y Condiciones</a></label>
@@ -118,39 +215,10 @@
                   </div>
             </form>
       </div>
-      <footer>
-            <img src="assets/images/lines/footer.png" alt="">
-      </footer>
+
       <script src="assets/js/jquery-3.7.1.min.js"></script>
-      <script>
-            $(document).ready(function () {
-                  $('.add').on('click', function () {
-                        $('.canje').hide();        // Oculta el botón "Canjear"
-                        $('.checkout').css('display', 'block');     // Muestra el botón "Validar Venta"
-                  });
-                  // Also see: https://www.quirksmode.org/dom/inputfile.html
-
-                  var inputs = document.querySelectorAll('.file-input')
-
-                  for (var i = 0, len = inputs.length; i < len; i++) {
-                        customInput(inputs[i])
-                  }
-
-                  function customInput(el) {
-                        const fileInput = el.querySelector('[type="file"]')
-                        const label = el.querySelector('[data-js-label]')
-
-                        fileInput.onchange =
-                              fileInput.onmouseout = function () {
-                                    if (!fileInput.value) return
-
-                                    var value = fileInput.value.replace(/^.*[\\\/]/, '')
-                                    el.className += ' -chosen'
-                                    label.innerText = value
-                              }
-                  }
-            });
-      </script>
+      <script src="assets/js/jquery.validate.min.js"></script>
+      <script src="assets/js/ventas.js"></script>
 
 </body>
 

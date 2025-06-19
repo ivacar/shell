@@ -26,68 +26,94 @@
                         <h4>Refaccionaria : Libramiento</h4>
                   </div>
                   <div class="reporte">
-                        <a href="ventasv2.html" class="cta_button">Agregar venta</a>
+                        <a href="ventas.html" class="cta_button">Agregar venta</a>
                   </div>
                   <div class="listado__refaccionarias">
                         <div class="refaccionaria">
                               <p>Historial de Ventas</p>
-                        </div>
-                        <div class="item">
-                              <div class="imagen_producto">
-                                    <img src="assets/images/prodcutos/producto.png" alt="">
-                                     <h4 class="nombre">R3X <span>(5L)</span></h4>
-                              </div>
-                              <div class="informacion_producto">
-                                    <p class="mdtxt">Piezas <br> <strong>12</strong></p>
-                                    <p class="fltxt">Fecha <br><strong>02/08/2025</strong></p>
-                              </div>
-                        </div>
-                        <div class="item">
-                              <div class="imagen_producto">
-                                    <img src="assets/images/prodcutos/producto.png" alt="">
-                                     <h4 class="nombre">R3X <span>(5L)</span></h4>
-                              </div>
-                              <div class="informacion_producto">
-                                    <p class="mdtxt">Piezas <br> <strong>12</strong></p>
-                                    <p class="fltxt">Fecha <br><strong>02/08/2025</strong></p>
+                              <div class="filtro">
+                                    <select name="" id="">
+                                          <option value="todo">-- Selecciona un filtro --</option> 
+                                          <option value="semana">Semanal</option> 
+                                          <option value="quincena">Quincenal</option> 
+                                          <option value="mes">Mensual</option> 
+                                          
+                                    </select>
                               </div>
                         </div>
-                        <div class="item">
-                              <div class="imagen_producto">
-                                    <img src="assets/images/prodcutos/producto.png" alt="">
-                                     <h4 class="nombre">R3X <span>(5L)</span></h4>
-                              </div>
-                              <div class="informacion_producto">
-                                    <p class="mdtxt">Piezas <br> <strong>12</strong></p>
-                                    <p class="fltxt">Fecha <br><strong>02/08/2025</strong></p>
-                              </div>
-                        </div>
-                        <div class="item">
-                              <div class="imagen_producto">
-                                    <img src="assets/images/prodcutos/producto.png" alt="">
-                                     <h4 class="nombre">R3X <span>(5L)</span></h4>
-                              </div>
-                              <div class="informacion_producto">
-                                    <p class="mdtxt">Piezas <br> <strong>12</strong></p>
-                                    <p class="fltxt">Fecha <br><strong>02/08/2025</strong></p>
-                              </div>
+                        <div id="no-more-tables">
+                              <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                                    <thead class="cf">
+                                          <tr>
+                                                <th>Refaccionaria</th>
+                                                <th>Fecha</th>
+                                                <th class="numeric">Piezas</th>
+                                                <th class="numeric">Litros</th>
+                                                <th class="numeric">Puntos</th>
+
+                                          </tr>
+                                    </thead>
+                                    <tbody>
+                                          <tr>
+                                                <td data-title="Refaccionaria">Tlaquepaque</td>
+                                                <td data-title="Fecha">17-06-2025</td>
+                                                <td data-title="Piezas" class="numeric">20</td>
+                                                <td data-title="Litros" class="numeric">380</td>
+                                                <td data-title="Puntos" class="numeric">38</td>
+
+                                          </tr>
+                                          <tr>
+                                                <td data-title="Refaccionaria">Tlaquepaque</td>
+                                                <td data-title="Fecha">02-06-2025</td>
+                                                <td data-title="Piezas" class="numeric">20</td>
+                                                <td data-title="Litros" class="numeric">380</td>
+                                                <td data-title="Puntos" class="numeric">38</td>
+
+                                          </tr>
+                                          <tr>
+                                                <td data-title="Refaccionaria">Tlaquepaque</td>
+                                                <td data-title="Fecha">21-01-2025</td>
+                                                <td data-title="Piezas" class="numeric">20</td>
+                                                <td data-title="Litros" class="numeric">380</td>
+                                                <td data-title="Puntos" class="numeric">38</td>
+
+                                          </tr>
+                                          <tr>
+                                                <td data-title="Refaccionaria">Tlaquepaque</td>
+                                                <td data-title="Fecha">21-01-2025</td>
+                                                <td data-title="Piezas" class="numeric">20</td>
+                                                <td data-title="Litros" class="numeric">380</td>
+                                                <td data-title="Puntos" class="numeric">38</td>
+
+                                          </tr>
+                                          <tr>
+                                                <td data-title="Refaccionaria">Tlaquepaque</td>
+                                                <td data-title="Fecha">21-01-2025</td>
+                                                <td data-title="Piezas" class="numeric">20</td>
+                                                <td data-title="Litros" class="numeric">380</td>
+                                                <td data-title="Puntos" class="numeric">38</td>
+
+                                          </tr>
+
+                                    </tbody>
+                              </table>
                         </div>
                   </div>
             </div>
       </div>
       <div class="puntos">
             <div class="item">
-                 Puntos: <strong>5648795</strong>
+                  Puntos: <strong>5648795</strong>
             </div>
             <div class="item">
-                  <a href="canje.html">Canjear</a>
+                  <a href="recompensas.html">Canjear</a>
             </div>
       </div>
       <footer>
             <img src="assets/images/lines/footer.png" alt="">
       </footer>
       <script src="assets/js/jquery-3.7.1.min.js"></script>
-
+      <script src="assets/js/vendedor-home.js"></script>
 </body>
 
 </html>

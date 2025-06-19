@@ -141,51 +141,48 @@ header .perfil img {
   font-weight: bold;
   margin-bottom: 5px;
 }
-.contenedor__principal .content_sp .listado__refaccionarias .item {
-  width: 100%;
-  display: flex;
-  padding: 15px 0;
-  border-bottom: 1px solid #f2f2f8;
-  align-items: center;
-  justify-content: space-between;
+.contenedor__principal .content_sp .listado__refaccionarias .refaccionaria .filtro {
+  display: block;
+  margin-top: 20px;
 }
-.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto {
-  width: 20%;
+.contenedor__principal .content_sp .listado__refaccionarias .refaccionaria .filtro select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #231f20;
+  background-color: white;
   text-align: center;
 }
-.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto img {
+.contenedor__principal .content_sp .listado__refaccionarias #no-more-tables {
   width: 100%;
-  height: auto;
-  max-width: 64px;
-  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
-.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto .nombre {
+.contenedor__principal .content_sp .listado__refaccionarias #no-more-tables table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+.contenedor__principal .content_sp .listado__refaccionarias #no-more-tables table thead {
+  background-color: #e1261c;
+  color: white;
+}
+.contenedor__principal .content_sp .listado__refaccionarias #no-more-tables table thead th {
+  padding: 10px;
+  text-align: center;
   font-weight: bold;
-  word-break: break-word;
+}
+.contenedor__principal .content_sp .listado__refaccionarias #no-more-tables table tbody tr td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
   font-size: 1rem;
   color: #231f20;
   text-align: center;
-  width: 100%;
 }
-.contenedor__principal .content_sp .listado__refaccionarias .item .imagen_producto .nombre span {
-  font-weight: bold;
-  color: #e1261c;
-  font-size: 0.6rem;
-}
-.contenedor__principal .content_sp .listado__refaccionarias .item .informacion_producto {
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.contenedor__principal .content_sp .listado__refaccionarias .item .informacion_producto p {
-  font-size: 0.8rem;
-  color: #231f20;
-  width: 50%;
-  line-height: 1.5;
-  font-weight: normal;
-  text-align: center;
+.contenedor__principal .content_sp .listado__refaccionarias #no-more-tables table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 .puntos {
@@ -237,4 +234,53 @@ footer img {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  /* Force table to not be like tables anymore */
+  #no-more-tables table,
+  #no-more-tables thead,
+  #no-more-tables tbody,
+  #no-more-tables th,
+  #no-more-tables td,
+  #no-more-tables tr {
+    display: block;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  #no-more-tables tr {
+    border: 1px solid #ccc;
+  }
+  #no-more-tables td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50% !important;
+    white-space: normal;
+    text-align: left;
+    font-size: 0.8rem !important;
+  }
+  #no-more-tables td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+  /*
+  Label the data
+  */
+  #no-more-tables td:before {
+    content: attr(data-title);
+  }
 }/*# sourceMappingURL=vendedor-home.css.map */
